@@ -358,7 +358,8 @@ fun  factorial_handler([1]) = [1]
 			  end;
 
 
-fun   factorial(n) = let
+fun  	factorial("0") = 1 
+|	factorial(n) = let
 				val check = if check_for_exception(explode(n)) = 1 then 1 else 0
 				val inp = fromString(n)
 				val fact = factorial_handler(inp)
